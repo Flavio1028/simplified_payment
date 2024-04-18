@@ -26,8 +26,8 @@ public class ClientSaveDTO {
     @Email(message = "é inválido.")
     private String email;
 
-    @NotNull(message = NOT_NULL_MESSAGE)
-    private Long documentNumber;
+    @NotBlank(message = BLANK_MESSAGE)
+    private String documentNumber;
 
     @NotBlank(message = BLANK_MESSAGE)
     private String password;

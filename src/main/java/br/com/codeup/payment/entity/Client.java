@@ -30,7 +30,7 @@ public class Client {
     private String documentType;
 
     @Column(name = "document_number", length = 14, nullable = false)
-    private Long documentNumber;
+    private String documentNumber;
 
     @Column(name = "password", nullable = false)
     private String password;

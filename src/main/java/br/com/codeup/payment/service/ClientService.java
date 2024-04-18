@@ -117,9 +117,9 @@ public class ClientService {
                 .build();
     }
 
-    private String validateDocument(Long documentNumber) {
+    private String validateDocument(String documentNumber) {
 
-        if (String.valueOf(documentNumber).length() != 11 && String.valueOf(documentNumber).length() != 14) {
+        if (documentNumber.length() != 11 && documentNumber.length() != 14) {
             throw new ValidationErrorException(ErrorMessageEnum.INVALID_DOCUMENT);
         }
 
