@@ -25,4 +25,4 @@ Para rodar a aplicação faça o download do código fonte, **configura as vari�
 
 ### Acessar o Swagger para ver os endpoints disponiveis.
 
-- **PENDENTE**
+    http://localhost:8080/payment/swagger-ui/index.html#/
