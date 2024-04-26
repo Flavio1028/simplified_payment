@@ -29,14 +29,14 @@ public class ExceptionHandlerController {
     @ExceptionHandler(value = {DataIntegrityViolationException.class})
     public ErrorDTO integrityViolationException(DataIntegrityViolationException exception) {
         return ErrorDTO.builder()
-                .message(exception.getCause().getCause().getLocalizedMessage())
+                .message(exception.getCause().getLocalizedMessage())
                 .data(LocalDateTime.now())
                 .build();
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(value = {ConstraintViolationException.class})
-    public ErrorDTO integrityViolationException(ConstraintViolationException exception) {
+    public ErrorDTO constraintViolationException(ConstraintViolationException exception) {
         return ErrorDTO.builder()
                 .message(ErrorMessageEnum.ERROR_VALIDATING_DATA.getMessage())
                 .data(LocalDateTime.now())
